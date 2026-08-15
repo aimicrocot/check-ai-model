@@ -57,9 +57,9 @@ python check_full.py https://your-proxy.com/v1 your-proxy-key deepseek-v4-pro
 Or download a folder: 
 
 ```bash
-check_full.py,
-run_check.bat
-run run_check.bat.
+1. check_full.py
+2. run_check.bat
+3. run run_check.bat.
 ```
 
 Or run `check_full_for_python.py` 
