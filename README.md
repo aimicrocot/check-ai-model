@@ -54,15 +54,14 @@ Or pass arguments directly (CMD):
 python check_full.py https://your-proxy.com/v1 your-proxy-key deepseek-v4-pro
 ```
 
-Or download a folder: 
+Or download: 
 
 ```bash
-1. check_full.py
-2. run_check.bat
-3. run run_check.bat
+1. check_full.py and run_check.bat to the same folder
+2. execute run_check.bat
 ```
 
-Or run `check_full_for_python.py`:
+Or download and run `check_full_for_python.py`:
 
 ```bash
 install Python 3 and add to your PATH
