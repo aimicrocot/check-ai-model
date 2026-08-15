@@ -62,7 +62,7 @@ Or download a folder:
 3. run run_check.bat.
 ```
 
-Or run `check_full_for_python.py` 
+Or run `check_full_for_python.py`:
 
 ```bash
 unstall Python 3 installed and add to your PATH
