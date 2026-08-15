@@ -41,30 +41,25 @@ At the end, the script prints every vendor/model keyword found anywhere in the r
 
 ## Usage
 
-```bash
-export PROXY_URL=https://your-proxy.com/v1
-export PROXY_KEY=your-proxy-key
-export PROXY_MODEL=deepseek-v4-pro
-python check_full.py
-```
-
-Or pass arguments directly (CMD):
+1. Download `check_full.py`
+2. Open your CMD
+3. Navigate to the file folder
+4. Pass the arguments directly:
 
 ```bash
 python check_full.py https://your-proxy.com/v1 your-proxy-key deepseek-v4-pro
 ```
 
-Or download: 
+Or put check_full.py and run_check.bat to the same folder: 
 
 ```bash
-1. check_full.py and run_check.bat to the same folder
-2. execute run_check.bat
+execute run_check.bat
 ```
 
-Or download and run `check_full_for_python.py`:
+Or make sure Python 3 is installed and added to your PATH:
 
 ```bash
-install Python 3 and add to your PATH
+download and run `check_full_for_python.py`:
 ```
 
 ### Optional: compare against the official API
