@@ -54,6 +54,16 @@ Or pass arguments directly:
 python check_full.py https://your-proxy.com/v1 your-proxy-key deepseek-v4-pro
 ```
 
+Or download a folder: 
+
+```bash
+check_full.py,
+run_check.bat
+run run_check.bat.
+```
+
+Or run `check_full_for_python.py` (you need Python 3 installed and added to your PATH).
+
 ### Optional: compare against the official API
 
 ```bash
