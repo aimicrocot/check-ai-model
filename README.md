@@ -65,7 +65,7 @@ run run_check.bat
 Or make sure `Python 3` is installed and added to your `PATH`:
 
 ```bash
-run run_check.bat
+run check_full.py 
 ```
 
 ##### Optional: compare against the official API (CMD)
@@ -163,7 +163,7 @@ run run_check.bat
 Или убедитесь, что `Python 3` установлен и добавлен в `PATH`:
 
 ```bash
-run run_check.bat
+run check_full.py 
 
 ```
 
