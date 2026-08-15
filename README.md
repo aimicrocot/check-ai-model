@@ -96,6 +96,8 @@ When set, Part 2 runs against both the proxy and the official endpoint, so you c
 
 </details>
 
+## Гайд на русском
+
 ### Тестирование OpenAI-совместимого прокси, провайдера и квантования
 
 Диагностический скрипт для OpenAI-совместимых API-прокси. Он отвечает на два вопроса:
