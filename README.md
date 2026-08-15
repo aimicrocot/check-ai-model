@@ -44,7 +44,7 @@ At the end, the script prints every vendor/model keyword found anywhere in the r
 ```bash
 export PROXY_URL=https://your-proxy.com/v1
 export PROXY_KEY=your-proxy-key
-export PROXY_MODEL=deepseek-v4-pro
+export PROXY_MODEL=deepseek-v4-pro (your model)
 python check_full.py
 ```
 
@@ -58,7 +58,7 @@ python check_full.py https://your-proxy.com/v1 your-proxy-key deepseek-v4-pro
 
 ```bash
 export OFFICIAL_URL=https://api.deepseek.com/v1
-export OFFICIAL_KEY=your-official-key
+export OFFICIAL_KEY=your-official-key (your model)
 python check_full.py
 ```
 
