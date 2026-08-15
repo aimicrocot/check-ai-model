@@ -56,7 +56,7 @@ Or put `check_full.py` and `run_check.bat` to the same folder:
 execute run_check.bat
 ```
 
-Or make sure Python 3 is installed and added to your PATH:
+Or make sure `Python 3` is installed and added to your `PATH`:
 
 ```bash
 download and run check_full_for_python.py:
