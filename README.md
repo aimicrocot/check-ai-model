@@ -42,7 +42,7 @@ At the end, the script prints every vendor/model keyword found anywhere in the r
 ## Usage
 
 1. Download `check_full.py`
-2. Open your CMD
+2. Open your `CMD`
 3. Navigate to the file folder
 4. Pass the arguments directly
 
