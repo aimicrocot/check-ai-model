@@ -33,7 +33,7 @@ The script inspects the resulting status codes, response headers (`Server`, `Via
   - Response speed (tokens/sec) and thinking/reasoning token counts (`thoughtsTokenCount` / `reasoning_tokens`, when the backend exposes them) are also logged as secondary signals of a cut-down model.
 - If a `429` response includes an abnormally large `Retry-After` (the script flags anything over 60s), it warns that this doesn't match how official vendor APIs behave and asks whether to skip that probe.
 
-Optionally, if you provide `OFFICIAL_URL` / `OFFICIAL_KEY`, Part 2 is run a second time against the official API for direct comparison.
+Optionally, if you provide `OFFICIAL URL` / `OFFICIAL KEY`, Part 2 is run a second time against the official API for direct comparison.
 
 ### Summary
 
