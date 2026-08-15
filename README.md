@@ -44,7 +44,7 @@ At the end, the script prints every vendor/model keyword found anywhere in the r
 1. Download `check_full.py`
 2. Open your CMD
 3. Navigate to the file folder
-4. Pass the arguments directly:
+4. Pass the arguments directly
 
 ```bash
 python check_full.py https://your-proxy.com/v1 your-proxy-key deepseek-v4-pro
@@ -53,13 +53,13 @@ python check_full.py https://your-proxy.com/v1 your-proxy-key deepseek-v4-pro
 Or put `check_full.py` and `run_check.bat` to the same folder: 
 
 ```bash
-execute run_check.bat
+run run_check.bat
 ```
 
 Or make sure `Python 3` is installed and added to your `PATH`:
 
 ```bash
-download and run check_full_for_python.py
+run check_full_for_python.py
 ```
 
 ### Optional: compare against the official API
