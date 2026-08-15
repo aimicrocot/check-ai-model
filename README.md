@@ -11,13 +11,13 @@ A diagnostic script for OpenAI-compatible API proxies. It answers two questions:
 
 No responses are faked or guessed — everything printed is exactly what the target endpoint returned.
 
-#### Why
+### Why
 
 Many "AI proxy" resellers advertise access to a specific model (e.g. a particular Claude, GPT, or Gemini version) while actually routing requests through unofficial infrastructure, cheaper backend models, or quantized/throttled variants. This script provokes real server errors and edge cases to surface identifying information the proxy operator didn't intend to leak (stack traces, vendor-specific error formats, response headers), and separately probes whether the model's actual behavior (determinism, reasoning depth, latency) matches what a full, official model should produce.
 
-#### How it works
+### How it works
 
-##### Part 1 — Provider fingerprinting
+#### Part 1 — Provider fingerprinting
 
 Sends a series of malformed/edge-case requests designed to trigger raw backend errors rather than a clean handled response:
 
@@ -29,7 +29,7 @@ Sends a series of malformed/edge-case requests designed to trigger raw backend e
 
 The script inspects the resulting status codes, response headers (`Server`, `Via`, `X-Powered-By`, `X-Request-Id`, etc.), and response bodies for stack traces, vendor-specific error schemas, and documentation links, then scans all of it for known vendor/model name signatures (OpenAI, Google/Vertex, Anthropic, AWS Bedrock, DeepSeek, and many others — see `VENDOR_SIGNATURES` in the script).
 
-##### Part 2 — Model degradation / quantization check
+#### Part 2 — Model degradation / quantization check
 
 - **Self-identification**: asks the model to describe itself as JSON, and compares the `model` field in the raw API response against the model name you requested.
 - **Reasoning tasks**: three prompts (a code-review bug hunt, a constraint-satisfaction logic puzzle, and a pattern-completion sequence) are each run **twice** at `temperature=0`.
@@ -39,11 +39,11 @@ The script inspects the resulting status codes, response headers (`Server`, `Via
 
 Optionally, if you provide `OFFICIAL URL` / `OFFICIAL KEY`, Part 2 is run a second time against the official API for direct comparison.
 
-##### Summary
+#### Summary
 
 At the end, the script prints every vendor/model keyword found anywhere in the raw responses across both parts — this is your best evidence of what's actually running behind the proxy.
 
-#### Usage
+### Usage
 
 Use CMD:
 
@@ -78,17 +78,17 @@ python check_full.py
 
 When set, Part 2 runs against both the proxy and the official endpoint, so you can compare determinism, speed, and reasoning depth side by side.
 
-#### Reading the output
+### Reading the output
 
 - **Part 1** tells you *where the request really goes* — look for vendor names, internal file paths, or documentation URLs leaking through error messages.
 - **Part 2** tells you *how intact the model is* — divergent outputs at `temperature=0`, a low/missing reasoning-token budget on hard tasks, or suspiciously high tokens/sec are all signs of possible truncation, quantization, or a cheaper substitute model.
 - No vendor keywords found doesn't mean the proxy is legitimate — it may just mean the proxy sanitizes its errors well. In that case, rely on the Part 2 signals instead.
 
-#### Requirements
+### Requirements
 
 - Python 3, standard library only (`urllib`, `json`, `os`, `sys`, `time`) — no external dependencies.
 
-#### Notes
+### Notes
 
 - All requests are sent only to the endpoint(s) you configure.
 - The empty-`messages[]` and malformed-JSON probes are expected to fail — that's the point; the *shape* of the failure is the signal.
@@ -105,13 +105,13 @@ When set, Part 2 runs against both the proxy and the official endpoint, so you c
 
 Никакие ответы не подделываются и не угадываются — всё, что выводится на экран, в точности соответствует ответу целевого эндпоинта.
 
-#### Зачем это нужно
+### Зачем это нужно
 
 Многие реселлеры «AI-прокси» заявляют о предоставлении доступа к конкретной модели (например, к определённым версиям Claude, GPT или Gemini), но на самом деле перенаправляют запросы через неофициальную инфраструктуру, более дешёвые модели или квантованные/ограниченные варианты. Этот скрипт провоцирует реальные ошибки сервера и граничные случаи, чтобы извлечь идентификационную информацию, которую оператор прокси не планировал раскрывать (стек-трейсы, специфичные для вендоров форматы ошибок, заголовки ответов). Отдельно он проверяет, соответствует ли реальное поведение модели (детерминированность, глубина рассуждений, задержка) тому, что должна выдавать полноценная официальная модель.
 
-#### Как это работает
+### Как это работает
 
-##### Часть 1 — Определение вендора (fingerprinting)
+#### Часть 1 — Определение вендора (fingerprinting)
 
 Отправляет серию некорректных или крайних запросов, предназначенных для вызова необработанных ошибок бэкенда, а не чистого обработанного ответа:
 
@@ -123,7 +123,7 @@ When set, Part 2 runs against both the proxy and the official endpoint, so you c
 
 Скрипт анализирует полученные коды ответов, заголовки (`Server`, `Via`, `X-Powered-By`, `X-Request-Id` и т. д.) и тела ответов на наличие стек-трейсов, схем ошибок конкретных вендоров и ссылок на документацию, а затем сканирует всё это на предмет сигнатур известных вендоров и моделей (OpenAI, Google/Vertex, Anthropic, AWS Bedrock, DeepSeek и многих других — см. `VENDOR_SIGNATURES` в скрипте).
 
-##### Часть 2 — Проверка на деградацию / квантование модели
+#### Часть 2 — Проверка на деградацию / квантование модели
 
 * **Самоидентификация**: просит модель описать себя в формате JSON и сравнивает поле `model` в сыром ответе API с запрошенным именем модели.
 * **Задачи на рассуждение**: три промпта (поиск багов при ревью кода, логическая puzzle-задача с ограничениями и продолжение последовательности) запускаются **дважды** с параметром `temperature=0`.
@@ -135,11 +135,11 @@ When set, Part 2 runs against both the proxy and the official endpoint, so you c
 
 Опционально, если указать `OFFICIAL URL` / `OFFICIAL KEY`, Часть 2 будет выполнена повторно через официальный API для прямого сравнения.
 
-##### Итог
+#### Итог
 
 В конце скрипт выводит все ключевые слова вендоров/моделей, найденные в сырых ответах в обеих частях — это главное доказательство того, что на самом деле работает за прокси.
 
-#### Использование
+### Использование
 
 Использование через CMD:
 
@@ -167,7 +167,7 @@ run check_full_for_python.py
 
 ```
 
-#### Опционально: сравнение с официальным API (CMD)
+### Опционально: сравнение с официальным API (CMD)
 
 ```bash
 export OFFICIAL_URL=https://api.deepseek.com/v1
@@ -184,11 +184,11 @@ python check_full.py
 * **Часть 2** показывает, *насколько модель сохранила свое качество* — разница в ответах при `temperature=0`, низкий или отсутствующий лимит токенов рассуждений на сложных задачах или подозрительно высокая скорость (токенов/сек) — все это признаки возможной урезки, квантования или подмены на более дешевую модель.
 * Отсутствие ключевых слов вендоров не означает, что прокси легален — это может лишь указывать на качественную очистку ошибок. В таком случае опирайтесь на сигналы из Части 2.
 
-#### Требования
+### Требования
 
 * Python 3, только стандартная библиотека (`urllib`, `json`, `os`, `sys`, `time`) — никаких внешних зависимостей.
 
-#### Примечания
+### Примечания
 
 * Все запросы отправляются только на настроенные вами эндпоинты.
 * Проверки с пустым `messages[]` и некорректным JSON гарантированно приведут к ошибке — в этом и смысл: сама *структура* ошибки служит сигналом.
