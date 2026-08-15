@@ -65,7 +65,7 @@ Or download a folder:
 Or run `check_full_for_python.py`:
 
 ```bash
-unstall Python 3 installed and add to your PATH
+install Python 3 and add to your PATH
 ```
 
 ### Optional: compare against the official API
