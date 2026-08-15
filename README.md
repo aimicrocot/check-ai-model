@@ -62,7 +62,11 @@ run_check.bat
 run run_check.bat.
 ```
 
-Or run `check_full_for_python.py` (you need Python 3 installed and added to your PATH).
+Or run `check_full_for_python.py` 
+
+```bash
+unstall Python 3 installed and add to your PATH
+```
 
 ### Optional: compare against the official API
 
