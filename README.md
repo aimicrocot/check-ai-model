@@ -100,7 +100,7 @@ python check_full.py
 
 EN ver
 
-<detalis>
+<details>
 
 # Testing an OpenAI-compatible proxy, provider, and quantization
 
@@ -194,5 +194,5 @@ When set, Part 2 runs against both the proxy and the official endpoint, so you c
 - The empty-`messages[]` and malformed-JSON probes are expected to fail — that's the point; the *shape* of the failure is the signal.
 - Some proxies rate-limit aggressively; the script has built-in retry/backoff logic for `429` responses, with a manual override if `Retry-After` looks abnormal.
 
-</detalis>
+</details>
 
