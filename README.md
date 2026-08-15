@@ -62,7 +62,7 @@ Or make sure `Python 3` is installed and added to your `PATH`:
 run check_full_for_python.py
 ```
 
-### Optional: compare against the official API
+### Optional: compare against the official API (CMD)
 
 ```bash
 export OFFICIAL_URL=https://api.deepseek.com/v1
