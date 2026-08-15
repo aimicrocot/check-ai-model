@@ -11,6 +11,10 @@ A diagnostic script for OpenAI-compatible API proxies. It answers two questions:
 
 No responses are faked or guessed — everything printed is exactly what the target endpoint returned.
 
+### Warning!
+
+Keep an eye on the command line and press Y/N promptly when prompted.
+
 ### Why
 
 Many "AI proxy" resellers advertise access to a specific model (e.g. a particular Claude, GPT, or Gemini version) while actually routing requests through unofficial infrastructure, cheaper backend models, or quantized/throttled variants. This script provokes real server errors and edge cases to surface identifying information the proxy operator didn't intend to leak (stack traces, vendor-specific error formats, response headers), and separately probes whether the model's actual behavior (determinism, reasoning depth, latency) matches what a full, official model should produce.
@@ -104,6 +108,10 @@ When set, Part 2 runs against both the proxy and the official endpoint, so you c
 2. **Является ли модель на том конце оригинальной полноценной версией или урезанной/квантованной?** (Часть 2 — Проверка на деградацию)
 
 Никакие ответы не подделываются и не угадываются — всё, что выводится на экран, в точности соответствует ответу целевого эндпоинта.
+
+### Важно!
+
+Следить за командной строкой и вовремя нажимать Y/N, когда требуется выбор
 
 ### Зачем это нужно
 
