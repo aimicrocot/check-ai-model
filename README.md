@@ -59,7 +59,7 @@ execute run_check.bat
 Or make sure `Python 3` is installed and added to your `PATH`:
 
 ```bash
-download and run check_full_for_python.py:
+download and run check_full_for_python.py
 ```
 
 ### Optional: compare against the official API
