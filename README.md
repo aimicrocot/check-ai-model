@@ -50,7 +50,7 @@ At the end, the script prints every vendor/model keyword found anywhere in the r
 python check_full.py https://your-proxy.com/v1 your-proxy-key deepseek-v4-pro
 ```
 
-Or put check_full.py and run_check.bat to the same folder: 
+Or put `check_full.py` and `run_check.bat` to the same folder: 
 
 ```bash
 execute run_check.bat
