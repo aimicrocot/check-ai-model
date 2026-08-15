@@ -98,6 +98,11 @@ When set, Part 2 runs against both the proxy and the official endpoint, so you c
 - The empty-`messages[]` and malformed-JSON probes are expected to fail — that's the point; the *shape* of the failure is the signal.
 - Some proxies rate-limit aggressively; the script has built-in retry/backoff logic for `429` responses, with a manual override if `Retry-After` looks abnormal.
 
+## My contacts
+
+- Telegram about RP/AI:
+https://t.me/sillytavern1
+
 </details>
 
 ### Тестирование OpenAI-совместимого прокси, провайдера и квантования
@@ -201,4 +206,9 @@ python check_full.py
 * Все запросы отправляются только на настроенные вами эндпоинты.
 * Проверки с пустым `messages[]` и некорректным JSON гарантированно приведут к ошибке — в этом и смысл: сама *структура* ошибки служит сигналом.
 * Некоторые прокси агрессивно ограничивают количество запросов (rate limit); в скрипт встроена логика повторных попыток с экспоненциальной задержкой для ответов `429` с возможностью ручного пропуска, если значение `Retry-After` выглядит аномально большим.
+
+## Контакты автора
+
+- Telegram про RP/AI:
+https://t.me/sillytavern1
 
