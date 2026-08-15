@@ -41,7 +41,7 @@ At the end, the script prints every vendor/model keyword found anywhere in the r
 
 ## Usage
 
-- CMD:
+Use CMD:
 
 1. Download `check_full.py`
 2. Open your `CMD`
@@ -52,13 +52,13 @@ At the end, the script prints every vendor/model keyword found anywhere in the r
 python check_full.py https://your-proxy.com/v1 your-proxy-key deepseek-v4-pro
 ```
 
-- Or put `check_full.py` and `run_check.bat` to the same folder: 
+Or put `check_full.py` and `run_check.bat` to the same folder: 
 
 ```bash
 run run_check.bat
 ```
 
-- Or make sure `Python 3` is installed and added to your `PATH`:
+Or make sure `Python 3` is installed and added to your `PATH`:
 
 ```bash
 run check_full_for_python.py
