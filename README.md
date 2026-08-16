@@ -17,7 +17,9 @@ Keep an eye on the command line and press Y/N promptly when prompted.
 
 ### Why
 
-Many "AI proxy" resellers advertise access to a specific model (e.g. a particular Claude, GPT, or Gemini version) while actually routing requests through unofficial infrastructure, cheaper backend models, or quantized/throttled variants. This script provokes real server errors and edge cases to surface identifying information the proxy operator didn't intend to leak (stack traces, vendor-specific error formats, response headers), and separately probes whether the model's actual behavior (determinism, reasoning depth, latency) matches what a full, official model should produce.
+Many "AI proxy" resellers advertise access to a specific model (e.g. a particular Claude, GPT, or Gemini version) while actually routing requests through unofficial infrastructure, cheaper backend models, or quantized/throttled variants. 
+
+This script provokes real server errors and edge cases to surface identifying information the proxy operator didn't intend to leak (stack traces, vendor-specific error formats, response headers), and separately probes whether the model's actual behavior (determinism, reasoning depth, latency) matches what a full, official model should produce.
 
 ### How it works
 
@@ -120,7 +122,9 @@ https://t.me/sillytavern1
 
 ### Зачем это нужно
 
-Многие реселлеры «AI-прокси» заявляют о предоставлении доступа к конкретной модели (например, к определённым версиям Claude, GPT или Gemini), но на самом деле перенаправляют запросы через неофициальную инфраструктуру, более дешёвые модели или квантованные/ограниченные варианты. Этот скрипт провоцирует реальные ошибки сервера и граничные случаи, чтобы извлечь идентификационную информацию, которую оператор прокси не планировал раскрывать (стек-трейсы, специфичные для вендоров форматы ошибок, заголовки ответов). Отдельно он проверяет, соответствует ли реальное поведение модели (детерминированность, глубина рассуждений, задержка) тому, что должна выдавать полноценная официальная модель.
+Многие реселлеры «AI-прокси» заявляют о предоставлении доступа к конкретной модели (например, к определённым версиям Claude, GPT или Gemini), но на самом деле перенаправляют запросы через неофициальную инфраструктуру, более дешёвые модели или квантованные/ограниченные варианты. 
+
+Этот скрипт провоцирует реальные ошибки сервера и граничные случаи, чтобы извлечь идентификационную информацию, которую оператор прокси не планировал раскрывать (стек-трейсы, специфичные для вендоров форматы ошибок, заголовки ответов). Отдельно он проверяет, соответствует ли реальное поведение модели (детерминированность, глубина рассуждений, задержка) тому, что должна выдавать полноценная официальная модель.
 
 ### Как это работает
 
